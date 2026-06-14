@@ -82,6 +82,6 @@ jobs:
             gh release upload "$tag" "$asset_path" --clobber
           else
             gh release create "$tag" "$asset_path" \
-              --title "Diamond Recycling $tag" \
+              --title "Diamond Recycling $VERSION" \
               --notes "Automated release for $tag."
           fi

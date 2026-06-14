@@ -153,7 +153,7 @@ $neoForgeMods | Set-Content "$tempDir/META-INF/neoforge.mods.toml" -Encoding UTF
 Write-Host "Creating JAR file..." -ForegroundColor Yellow
 
 $compress = @{
-    Path = "$tempDir/*"
+    Path = (Join-Path $tempDir "*")
     CompressionLevel = "Optimal"
     DestinationPath = $outputJar
 }
